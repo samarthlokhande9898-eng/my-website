@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d1b2a">
+  <meta name="description" content="MindAware: learn about addiction prevention, healthy coping, and supportive conversations.">
+  <title>{% block title %}MindAware | Addiction Awareness{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="{{ url_for('home') }}"><span class="brand-mark">M</span><span>MindAware<small>Awareness • Prevention • Support</small></span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMenu()">☰</button>
+  <nav id="nav">
+    <a href="{{ url_for('home') }}">Home</a><a href="{{ url_for('learn') }}">Learn</a><a href="{{ url_for('quiz') }}">Quiz</a><a href="{{ url_for('support') }}">Get Support</a>
+    {% if current_user %}<a href="{{ url_for('dashboard') }}">Dashboard</a><a class="nav-cta" href="{{ url_for('logout') }}">Log out</a>
+    {% else %}<a href="{{ url_for('login') }}">Log in</a><a class="nav-cta" href="{{ url_for('register') }}">Join us</a>{% endif %}
+  </nav>
+</header>
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}<div class="flash-wrap">{% for category, message in messages %}<div class="flash {{ category }}">{{ message }}</div>{% endfor %}</div>{% endif %}
+{% endwith %}
+<main>{% block content %}{% endblock %}</main>
+<footer class="footer"><div><a class="brand footer-brand" href="{{ url_for('home') }}"><span class="brand-mark">M</span><span>MindAware<small>Small steps. Stronger support.</small></span></a><p>College CEP Project • Addiction Awareness & Prevention</p></div><div class="footer-note">Educational information only—not diagnosis, treatment, or emergency support.</div><div class="copyright">© 2026 MindAware Student Project</div></footer>
+<script>
+function toggleMenu(){const n=document.getElementById('nav');const b=document.querySelector('.menu-toggle');n.classList.toggle('open');b.setAttribute('aria-expanded',n.classList.contains('open'));}
+</script>
+</body></html>

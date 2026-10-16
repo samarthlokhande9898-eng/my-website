@@ -1,0 +1,16 @@
+{% extends "base.html" %}{% block title %}Learn | MindAware{% endblock %}
+{% block content %}
+<section class="page-hero"><div class="eyebrow">THE AWARENESS GUIDE</div><h1>Understand it.<br><span>Talk about it.</span></h1><p>Clear, stigma-free information to help you understand addiction and prevention.</p></section>
+<section class="section narrow">
+ <div class="info-panel"><div class="feature-icon violet">✦</div><div><h2>What is addiction?</h2><p>Addiction is a complex health condition involving difficulty controlling the use of a substance or engagement in a behaviour despite harmful consequences. It is not simply a lack of willpower, and support from qualified professionals can help.</p></div></div>
+ <h2 class="content-title">What can increase risk?</h2><div class="two-col">
+  <article class="content-card"><h3>Possible risk factors</h3><ul><li>Ongoing stress or emotional distress</li><li>Pressure from friends or social settings</li><li>Family history and environmental influences</li><li>Limited access to support and healthy coping tools</li></ul></article>
+  <article class="content-card"><h3>Protective factors</h3><ul><li>Trusted friends, family, teachers, or mentors</li><li>Healthy ways to manage stress</li><li>Positive activities, rest, and connection</li><li>Early, non-judgemental professional support</li></ul></article>
+ </div>
+ <h2 class="content-title">Signs someone may need support</h2><p class="section-intro">A single change does not prove addiction. If several changes persist or affect everyday life, approach the person kindly and encourage them to speak with a qualified professional.</p>
+ <div class="sign-grid"><div><span>01</span><h3>Daily routine changes</h3><p>Noticeable changes in sleep, attendance, responsibilities, or usual activities.</p></div><div><span>02</span><h3>Emotional changes</h3><p>Ongoing distress, mood changes, isolation, or difficulty coping.</p></div><div><span>03</span><h3>Relationships affected</h3><p>Repeated conflict or withdrawing from people who usually provide support.</p></div></div>
+ <h2 class="content-title">Myth vs. fact</h2><div class="myth-list"><div><span class="myth">MYTH</span><p>“People should just deal with it on their own.”</p><span class="fact">FACT</span><p>Support, treatment, and caring relationships can make recovery more manageable.</p></div><div><span class="myth">MYTH</span><p>“You can always tell who is struggling.”</p><span class="fact">FACT</span><p>Struggles are not always visible. Listen, avoid assumptions, and offer support.</p></div><div><span class="myth">MYTH</span><p>“Talking about addiction always makes things worse.”</p><span class="fact">FACT</span><p>A calm, respectful conversation can help someone feel less alone.</p></div></div>
+ <div class="callout"><strong>How can you help?</strong><p>Listen without blaming, explain what you have noticed gently, respect privacy, and encourage help from a trusted adult, counsellor, doctor, or qualified local service. If someone is in immediate danger, contact local emergency services.</p><a class="text-link" href="{{ url_for('support') }}">Explore support steps →</a></div>
+ <div class="center-action"><a class="btn btn-primary" href="{{ url_for('quiz') }}">Test your awareness →</a></div>
+</section>
+{% endblock %}

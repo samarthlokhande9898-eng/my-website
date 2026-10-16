@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}MindAware | Break the Stigma, Build Support{% endblock %}
+{% block content %}
+<section class="hero">
+ <div class="hero-copy"><div class="eyebrow"><span class="dot"></span> AWARENESS IS THE FIRST STEP</div>
+  <h1>Choose awareness.<br><span>Choose a healthier tomorrow.</span></h1>
+  <p class="hero-lead">Addiction can affect people from every background. Understanding it, talking without judgement, and seeking trusted support can make a real difference.</p>
+  <div class="hero-actions"><a class="btn btn-primary" href="{{ url_for('learn') }}">Explore the guide <span>→</span></a><a class="btn btn-ghost" href="{{ url_for('quiz') }}">Take awareness quiz</a></div>
+  <div class="trust-row"><span>✓ Learn without judgement</span><span>✓ Support, not stigma</span></div>
+ </div>
+ <div class="hero-art" aria-label="Illustration representing support and wellbeing"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="sun"></div><div class="path"></div><div class="person person-one"><i></i><b></b></div><div class="person person-two"><i></i><b></b></div><div class="plant"><i></i><i></i><i></i><b></b></div><div class="art-card"><span class="art-icon">♡</span><div><strong>You are not alone.</strong><small>Help starts with a conversation.</small></div></div></div>
+</section>
+<section class="stats-strip"><div><strong>01</strong><span>Understand addiction</span></div><div><strong>02</strong><span>Recognise warning signs</span></div><div><strong>03</strong><span>Encourage support</span></div><div><strong>04</strong><span>Build healthy habits</span></div></section>
+<section class="section"><div class="section-heading"><div><div class="eyebrow">YOUR AWARENESS TOOLKIT</div><h2>Knowledge creates <span>possibility.</span></h2></div><p>Start with small, practical steps to understand addiction and create a more supportive community.</p></div>
+ <div class="feature-grid">
+  <a class="feature-card" href="{{ url_for('learn') }}"><div class="feature-icon violet">✦</div><span class="card-number">01 / LEARN</span><h3>Know the facts</h3><p>Understand addiction, risk factors, common myths, and why compassion matters.</p><span class="card-link">Read the guide ↗</span></a>
+  <a class="feature-card" href="{{ url_for('quiz') }}"><div class="feature-icon mint">✓</div><span class="card-number">02 / TEST YOUR KNOWLEDGE</span><h3>Check your awareness</h3><p>Answer a few quick questions and see how much you know about prevention and support.</p><span class="card-link">Start the quiz ↗</span></a>
+  <a class="feature-card" href="{{ url_for('support') }}"><div class="feature-icon peach">♡</div><span class="card-number">03 / TAKE ACTION</span><h3>Start a conversation</h3><p>Explore ways to support a friend and identify a trusted adult or qualified professional.</p><span class="card-link">Explore support ↗</span></a>
+ </div>
+</section>
+<section class="quote-band"><div class="quote-mark">“</div><div><p>Support begins when we replace judgement with understanding.</p><span>MINDAWARE PROJECT PRINCIPLE</span></div><a href="{{ url_for('learn') }}" class="btn btn-light">See how to help →</a></section>
+<section class="section bottom-cta"><div><div class="eyebrow">ONE STEP AT A TIME</div><h2>Make awareness <span>actionable.</span></h2><p>Learn how to look after yourself, support others, and find appropriate help when it is needed.</p></div><a class="btn btn-primary" href="{{ url_for('support') }}">Find next steps →</a></section>
+{% endblock %}
